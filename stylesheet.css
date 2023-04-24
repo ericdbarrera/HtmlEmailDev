@@ -1,0 +1,51 @@
+git checkout -b gh-pages
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fallback for browsers that don't support scroll-behavior */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.clones  {
+  width:auto;
+ height:490px;;
+  overflow-y: hidden;
+}
+
+
+.clones:hover {
+
+  z-index: 1;
+      transition: 0.5s ease-in-out;
+  
+  }
+
+  .clones img {
+      object-fit: cover;
+      width:auto;
+      transform: translateY(0%);
+      transition: 0.8s ease-in-out;
+  }
+  
+  .clones:hover img {
+      object-fit: cover;
+      transform: translateY(calc(-35% + 10px));
+      transition: 1.6s ease-in-out;
+  
+    }
+
+    .lazy-load {
+      opacity: 0; /* hide the element */
+      transition: opacity 0.3s ease-in-out; /* add a smooth transition */
+    }
+    
+    .lazy-load.loaded {
+      opacity: 1; /* show the element */
+    }
+    
